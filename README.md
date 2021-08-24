@@ -11,3 +11,5 @@ sentry:
   class: Sentry
   dsn: !secret sentry_dsn
 ```
+
+Additionally you need to add the contents of `apps/requirement.txt` to your master `requirements.txt` file, located in the `apps/` root next to your `apps.yaml`.
