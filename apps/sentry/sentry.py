@@ -17,7 +17,6 @@ class Sentry(hass.Hass):
         sentry_sdk.init(
             dsn=self.args.get("dsn"),
             environment=self.args.get("environment"),
-            in_app_include=["hive"],
             integrations=[
                 AioHttpIntegration(),
                 LoggingIntegration(
