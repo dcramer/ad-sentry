@@ -1,3 +1,9 @@
+import appdaemon.plugins.hass.hassapi as hass
+
+#
+# Sentry
+#
+
 import logging
 
 import sentry_sdk
@@ -5,8 +11,6 @@ from sentry_sdk.integrations.aiohttp import AioHttpIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
 
 import appdaemon.utils as utils
-import hassapi as hass
-
 
 class Sentry(hass.Hass):
     def initialize(self):
