@@ -26,6 +26,5 @@ class Sentry(hass.Hass):
                 ),
             ],
             release=self.args.get("release") or f"appdaemon-{utils.__version__}",
-            traces_sample_rate=1.0,
-            traceparent_v2=True,
+            traces_sample_rate=self.args.get("traces_sample_rate", 1.0),
         )
